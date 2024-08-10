@@ -1,0 +1,42 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  background-color: #FFAF00;
+  color: #7C00FE;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken(#FFAF00, 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &.operator {
+    background-color: #F5004F;
+    color: #F9E400;
+  }
+
+  &.equals {
+    background-color: #F9E400;
+    color: #7C00FE;
+    grid-column: span 2;
+  }
+
+  &.clear {
+    background-color: #F5004F;
+    color: #F9E400;
+  }
+}

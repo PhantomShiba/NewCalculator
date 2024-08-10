@@ -1,0 +1,7 @@
+<div class="keypad">
+  <button *ngFor="let btn of buttons"
+          (click)="onButtonClick(btn)"
+          [ngClass]="{'operator': isOperator(btn), 'equals': btn === '=', 'clear': btn === 'C'}">
+    {{ btn }}
+  </button>
+</div>
